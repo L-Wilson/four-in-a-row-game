@@ -6,25 +6,14 @@ class Token {
         this.columnLocation = 0;
     }
     
-    /** 
-     * Gets associated htmlToken.
-     * @return  {element}   Html element associated with token object.
-     */
     get htmlToken() {
         return document.getElementById(this.id);
     }
 
-    /** 
- * Gets left offset of html element.
- * @return  {number}   Left offset of token object's htmlToken.
- */
     get offsetLeft() {
         return this.htmlToken.offsetLeft;
     }
     
-    /** 
-     * Draws new HTML token.
-     */
     drawHTMLToken(){
         const token = document.createElement('div');
         document.getElementById('game-board-underlay').appendChild(token);
